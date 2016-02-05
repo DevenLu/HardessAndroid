@@ -1,4 +1,4 @@
-package com.mdss.hardess;
+package com.moduth.hardess;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
