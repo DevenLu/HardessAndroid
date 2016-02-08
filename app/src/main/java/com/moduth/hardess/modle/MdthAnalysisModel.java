@@ -1,4 +1,4 @@
-package com.mdth.hardess.modle;
+package com.moduth.hardess.modle;
 
 import android.os.Parcelable;
 

@@ -1,6 +1,6 @@
-package com.mdth.hardess.http.exception;
+package com.moduth.hardess.http.exception;
 
-import com.mdth.hardess.modle.MdthAnalysisModel;
+import com.moduth.hardess.modle.MdthAnalysisModel;
 
 /**
  * Created by Abner on 16/1/27.
