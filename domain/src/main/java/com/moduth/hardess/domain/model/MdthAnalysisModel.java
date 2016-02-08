@@ -1,4 +1,4 @@
-package com.moduth.hardess.modle;
+package com.moduth.hardess.domain.model;
 
 import android.os.Parcelable;
 

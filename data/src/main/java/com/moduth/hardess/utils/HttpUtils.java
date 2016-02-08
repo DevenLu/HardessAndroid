@@ -1,5 +1,8 @@
 package com.moduth.hardess.utils;
 
+import com.moduth.hardess.domain.model.MdthAnalysisModel;
+import com.moduth.hardess.http.MdthApi;
+
 import java.util.Map;
 
 import rx.Observable;
@@ -12,6 +15,7 @@ import rx.Observable;
  */
 public class HttpUtils {
 
+    public static String API_GET_REPROSITORY_BY_USER = "get_reprository_by_user";
 
     /**
      * 处理params
@@ -22,9 +26,15 @@ public class HttpUtils {
     public static Observable<Map<String, String>> initParams(final Map<String, String> params, String methodName) {
 
 
-
-
-
         return Observable.just(params);
+    }
+
+
+    public static Observable<MdthAnalysisModel> requestApi(MdthApi mdthApi, String methodName, Map<String, String> params) {
+        if (API_GET_REPROSITORY_BY_USER.equals(methodName)) {
+            return mdthApi.testPost(params);
+        } else {
+            return null;
+        }
     }
 }

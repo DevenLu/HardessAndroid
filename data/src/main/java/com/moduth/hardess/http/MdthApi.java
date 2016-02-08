@@ -2,13 +2,17 @@ package com.moduth.hardess.http;
 
 
 
-import com.moduth.hardess.modle.MdthAnalysisModel;
+import com.moduth.hardess.domain.model.MdthAnalysisModel;
+import com.moduth.hardess.domain.model.Repository;
 
+import java.util.List;
 import java.util.Map;
 
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import rx.Observable;
 
 /**
@@ -29,4 +33,7 @@ public interface MdthApi {
     Observable<MdthAnalysisModel> testPost(@FieldMap Map<String, String> options);
 
 
+    @FormUrlEncoded
+    @GET("users/{username}/repos")
+    Observable<List<Repository>> getRepositoriesByUserName(@Path("username") String userName );
 }

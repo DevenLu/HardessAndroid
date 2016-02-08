@@ -1,10 +1,11 @@
 package com.moduth.hardess.domain.repository;
 
-import android.database.Observable;
 
 import com.moduth.hardess.domain.model.Repository;
 
 import java.util.List;
+
+import rx.Observable;
 
 /**
  * Created by markzhai on 16/2/8

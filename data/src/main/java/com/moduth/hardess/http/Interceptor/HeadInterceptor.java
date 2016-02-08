@@ -24,6 +24,9 @@ public class HeadInterceptor implements Interceptor {
 
         Request request = original.newBuilder()
                 .method(original.method(), original.body())
+                .addHeader("User-Agent", "Test")
+                .addHeader("Accept", "application/vnd.github.v3+json")
+                .addHeader("Authorization", "")
                 .build();
 
         Log.d("retrofit", String.format("Sending request %s", toGetUrl(request)));

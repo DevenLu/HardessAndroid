@@ -6,4 +6,7 @@ package com.moduth.hardess.domain.model;
  * @author markzhai
  */
 public class Repository {
+
+    public String name; // Repository name
+
 }

@@ -2,7 +2,7 @@ package com.moduth.hardess.http;
 
 import com.google.gson.Gson;
 import com.moduth.hardess.http.Interceptor.HeadInterceptor;
-import com.moduth.hardess.modle.MdthAnalysisModel;
+import com.moduth.hardess.domain.model.MdthAnalysisModel;
 import com.moduth.hardess.utils.HttpUtils;
 
 import java.util.Map;
@@ -51,10 +51,11 @@ public class MdthRequest {
         return mInstance;
     }
 
+
     public MdthRequest() {
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("")
+                .baseUrl("https://api.github.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(okHttpClient())
@@ -91,7 +92,7 @@ public class MdthRequest {
                 .flatMap(new Func1<Map<String, String>, Observable<MdthAnalysisModel>>() {
                     @Override
                     public Observable<MdthAnalysisModel> call(Map<String, String> stringStringMap) {
-                        return mMdthHttpApi.testPost(stringStringMap);
+                        return HttpUtils.requestApi(mMdthHttpApi,methodName,stringStringMap);
                     }
                 })
                 .flatMap(new Func1<MdthAnalysisModel, Observable<T>>() {
@@ -115,6 +116,5 @@ public class MdthRequest {
 
 
     }
-
 
 }
