@@ -36,7 +36,9 @@ public class HeadInterceptor implements Interceptor {
 
     @NonNull
     private String toGetUrl(Request request) {
-
+        if("GET".equals(request.method())){
+            return request.url().toString();
+        }
         StringBuilder url = new StringBuilder(request.url().toString());
 
         StringBuilder bodyStr = new StringBuilder("?");

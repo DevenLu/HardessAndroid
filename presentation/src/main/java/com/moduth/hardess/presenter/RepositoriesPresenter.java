@@ -1,6 +1,7 @@
 package com.moduth.hardess.presenter;
 
 import com.moduth.hardess.data.repository.RepositoryDataRepository;
+import com.moduth.hardess.domain.interactor.DefaultObservable;
 import com.moduth.hardess.domain.interactor.DefaultSubscriber;
 import com.moduth.hardess.domain.model.Repository;
 import com.moduth.hardess.domain.repository.RepositoryRepository;
@@ -36,7 +37,7 @@ public class RepositoriesPresenter  {
 
     }
 
-    public class RepositoriesSubscriber extends DefaultSubscriber<List<Repository>>{
+    public class RepositoriesSubscriber extends DefaultObservable<List<Repository>> {
 
         private RepositoriesListener mListener;
 

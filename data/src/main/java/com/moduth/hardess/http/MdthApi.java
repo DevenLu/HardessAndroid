@@ -33,7 +33,6 @@ public interface MdthApi {
     Observable<MdthAnalysisModel> testPost(@FieldMap Map<String, String> options);
 
 
-    @FormUrlEncoded
     @GET("users/{username}/repos")
     Observable<List<Repository>> getRepositoriesByUserName(@Path("username") String userName );
 }
