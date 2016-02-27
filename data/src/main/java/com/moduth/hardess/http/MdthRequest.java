@@ -3,7 +3,6 @@ package com.moduth.hardess.http;
 import com.google.gson.Gson;
 import com.moduth.hardess.http.Interceptor.HeadInterceptor;
 import com.moduth.hardess.domain.model.MdthAnalysisModel;
-import com.moduth.hardess.utils.HttpUtils;
 
 import java.util.Map;
 

@@ -1,7 +1,6 @@
-package com.moduth.hardess.utils;
+package com.moduth.hardess.http;
 
 import com.moduth.hardess.domain.model.MdthAnalysisModel;
-import com.moduth.hardess.http.MdthApi;
 
 import java.util.Map;
 
@@ -13,7 +12,7 @@ import rx.Observable;
  * github https://github.com/nimengbo
  * 初始化参数
  */
-public class HttpUtils {
+class HttpUtils {
 
     public static String API_GET_REPROSITORY_BY_USER = "get_reprository_by_user";
 
